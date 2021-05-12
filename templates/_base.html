@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
 
+    <title>{% block title %}studioFood{% endblock title %}</title>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
@@ -17,15 +19,44 @@
     <!-- jQuery 3 -->
     <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
 
+    {% block css %}
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Custom styles CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-    <title>StudioFoodApp</title>
+    {% endblock %}
+
+
 </head>
 
 <body>
     <nav>
         {% include "part/_nav.html" %}
     </nav>
+
+    <a class="navbar-brand" href="">studioFood</a>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">About</a>
+            </li>
+            {% if request.user.is_authenticated %}
+            
+            {% else %}
+            
+            {% endif %}
+        </ul>
+    </div>
+    </nav>
+    
+    </div>
+    
     {% block content %}
     {% endblock content %}
 

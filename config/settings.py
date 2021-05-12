@@ -40,8 +40,9 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-    'users.apps.UserConfig',
-    'foods.apps.FoodConfig',
+    'apps.apps.AppsConfig',
+    'users.apps.UsersConfig',
+    'foods.apps.FoodsConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
@@ -61,7 +62,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR.joinpath("templates"),
+        'DIRS': [BASE_DIR.joinpath("templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,7 +129,6 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [BASE_DIR.joinpath("static")]
 
-AUTH_USER_MODEL = "users.User"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
