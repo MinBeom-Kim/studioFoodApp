@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <!-- jQuery 3 -->
+    <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>StudioFoodApp</title>
+</head>
+
+<body>
+    <nav>
+        {% include "part/_nav.html" %}
+    </nav>
+    {% block content %}
+    {% endblock content %}
+
+    <footer>
+        {% include "part/_footer.html" %}
+    </footer>
+    
+</body>
+
+</html>
