@@ -33,40 +33,9 @@
 
 <body>
 
+{% include "part/_nav.html" %}
+ 
 
-    {% if request.user.is_authenticated %}
-        <nav>
-            {% include "part/_nav.html" %}
-        </nav>
-        
-        <footer>
-            {% include "part/_footer.html" %}
-        </footer>
-    
-    {% else %}
-
-    <!-- !user-->
-
-        <div class="v133_548">
-
-            <div class="signBox center-block">
-                <a href="{% url 'common:login' %}">
-                <div class="v113_549"> Sign In
-                </div>
-                </a>
-
-                <a href="{% url 'common:signup' %}">
-                <div class="v113_549" >Sign Up</div></a>
-
-            </div>
-        
-            
-        </div>
-
-
-
-    {% endif %}
-    
 </body>
 
 </html>

@@ -23,7 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # user
-    path('', include("apps.urls", namespace="index")),
+    path('common/', include("common.urls")),
+    path('', include("foods.urls")),
+
+
 
 ]
 
