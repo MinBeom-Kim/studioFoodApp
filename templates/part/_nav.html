@@ -1,3 +1,4 @@
+
 {% block content %}
 
 <div style="padding-top: 5%;">
@@ -5,7 +6,15 @@
 <li class="nav-item">
 
     {% if user.is_authenticated %}
-    <a class="nav-link" href="{% url 'common:logout' %}">{{ user.username }} (로그아웃)</a>
+    <span class="v116_20">{{ user.username }}</span>
+    <span class="v116_21">121일 출석</span>
+    <a class="nav-link" href="{% url 'common:logout' %}">(로그아웃)</a>
+    <div class="v116_22">
+        <div class="v116_23"></div>
+        
+    </div>
+    
+    
 
     {% endif %}
 

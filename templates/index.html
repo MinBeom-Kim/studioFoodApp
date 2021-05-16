@@ -1,7 +1,25 @@
-{% extends "_base.html" %}
+{% include "_base.html" %}
 
 {% block content %}
-<!-- request.user -->
 
+{% if request.user.is_authenticated %}
+
+<!-- request.user -->
+<div class="v116_24">
+    <span class="v116_31">오늘의 식사</span>
+    <span class="v116_32"><a>More</a></span>
+    <div class="v116_39"></div>
+    <div class="v116_51"></div>
+    <div class="v116_59"></div>
+    <div class="v116_49"></div>
+    <div class="v116_50"></div>
+</div>
+<div class="v116_33">
+    <span class="v116_31">게임현황</span>
+<span class="v116_32"><a>More</a></span></div>
+    
+</div>
+
+{% endif %}
 
 {% endblock %}
