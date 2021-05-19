@@ -1,18 +1,13 @@
-
 {% block content %}
 
-<div style="padding-top: 5%;">
-
-<li class="nav-item">
+<nav id="nav">
 
     {% if user.is_authenticated %}
-    <span class="v116_20">{{ user.username }}</span>
-    <span class="v116_21">121일 출석</span>
+    <span class="user-name">{{ user.username }}</span>
+    <span class="
+    user-attendance">121일 출석</span>
     <a class="nav-link" href="{% url 'common:logout' %}">(로그아웃)</a>
-    <div class="v116_22">
-        <div class="v116_23"></div>
-        
-    </div>
+    <div class="user-profile"></div>
     
     
 
