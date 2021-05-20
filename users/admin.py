@@ -12,7 +12,10 @@ class CustomUserAdmin(UserAdmin):
         (
             "Custom Profile",
             {
-                "fields": ("gender", "bio", "birthdate"),
+                "fields": ("gender",
+                 "role",
+                 'profile_image',
+                 "bio", "birthdate"),
             },
         ),
     )

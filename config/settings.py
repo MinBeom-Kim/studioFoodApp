@@ -44,6 +44,7 @@ PROJECT_APPS = [
     'apps.apps.AppsConfig',
     'users.apps.UsersConfig',
     'foods.apps.FoodsConfig',
+    'rolepermissions',
     
 ]
 
@@ -58,6 +59,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+ROLEPERMISSIONS_MODULE = 'config.roles'
 
 ROOT_URLCONF = 'config.urls'
 

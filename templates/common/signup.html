@@ -31,6 +31,24 @@
             <input type="password" class="form-control" name="password2" id="password2"
                 value="{{ form.password2.value|default_if_none:'' }}">
         </div>
+        <div class="form-group">
+        
+        
+            <label class="required" for="id_gender">Gender:</label>
+        
+            <select name="gender" required id="id_gender">
+                <option value="" selected>---------</option>
+        
+                <option value="male">Male</option>
+        
+                <option value="female">Female</option>
+        
+            </select>
+        
+        
+        
+        </div>
+
         
         <button type="submit" class="btn btn-primary">생성하기</button>
     </form>

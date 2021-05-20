@@ -9,6 +9,8 @@ black = "*"
 flake8 = "*"
 libsass = "*"
 django-sass-processor = "*"
+django-role-permissions = "*"
+pillow = "*"
 
 [dev-packages]
 autopep8 = "*"
