@@ -26,6 +26,8 @@
     <!-- Custom styles CSS -->
     <link rel="stylesheet" href="{% static '/css/main.css' %}">
 
+    <link rel="stylesheet" href="{% static '/css/group.css' %}">
+
     {% endblock %}
 
 
@@ -34,56 +36,7 @@
 <body>
 
 
-    {% if request.user.is_authenticated %}
 
-    {% if request.user.role == "teacher" %}
-        <nav>
-            {% include "part/_teacher_nav.html" %}
-        </nav>
-    
-    {% else %}
-        <nav>
-            {% include "part/_nav.html" %}
-        </nav>
-    
-
-    
-    {% endif %}
-
-
-
-        
-        <footer>
-            {% include "part/_footer.html" %}
-        </footer>
-    
-    {% else %}
-
-    <!-- !user-->
-
-        <div class="v133_548">
-
-            <div class="signBox center-block">
-                <a href="{% url 'common:login' %}">
-                <div class="v113_549"> Sign In
-                </div>
-                </a>
-
-                <a href="{% url 'common:signup' %}">
-                <div class="v113_549" >Sign Up</div></a>
-
-            </div>
-        
-            
-        </div>
-
-
-
-    {% endif %}
-    
 </body>
-
-
-
 
 </html>

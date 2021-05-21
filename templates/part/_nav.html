@@ -5,7 +5,7 @@
     {% if user.is_authenticated %}
     <span class="user-name">{{ user.username }}</span>
     <span class="
-    user-attendance">121일 출석</span>
+    user-attendance">{{ user.attend }}일 출석</span>
     <a class="nav-link" href="{% url 'common:logout' %}">(로그아웃)</a>
     <div class="user-profile"></div>
     

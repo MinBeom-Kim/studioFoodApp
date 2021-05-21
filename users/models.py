@@ -26,6 +26,7 @@ class User(AbstractUser):
 
     gender = models.CharField(choices=GENDER_CHOICES, max_length=10)
     role = models.CharField(choices=ROLE_CHOICES, max_length=10)
-    profile_image = models.ImageField(null=True)
+    profile_image = models.ImageField(null=True, default="")
     bio = models.TextField(default="", blank=True)
     birthdate = models.DateField(null=True, blank=True)
+    attend = models.IntegerField(default=0)

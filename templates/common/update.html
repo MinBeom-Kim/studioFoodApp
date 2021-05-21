@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+{% block container %}
+
+<h1>User Edit</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {% bootstrap_form user_change_form %}
+    <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}

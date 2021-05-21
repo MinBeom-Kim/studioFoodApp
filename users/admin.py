@@ -15,7 +15,8 @@ class CustomUserAdmin(UserAdmin):
                 "fields": ("gender",
                  "role",
                  'profile_image',
-                 "bio", "birthdate"),
+                 "bio", "birthdate",
+                 "attend"),
             },
         ),
     )
