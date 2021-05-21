@@ -44,6 +44,7 @@ PROJECT_APPS = [
     'apps.apps.AppsConfig',
     'users.apps.UsersConfig',
     'foods.apps.FoodsConfig',
+    'groups.apps.GroupsConfig',
     'rolepermissions',
     
 ]

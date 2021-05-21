@@ -25,8 +25,7 @@ urlpatterns = [
     # user
     path('common/', include("common.urls")),
     path('', include("foods.urls")),
-
-
+    path('group/', include("groups.urls")),
 
 ]
 
