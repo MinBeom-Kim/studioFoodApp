@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+
+    <title>{% block title %}studioFood_Class_Detail{% endblock title %}</title>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <!-- jQuery 3 -->
+    <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+
+    {% block css %}
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- semantic-ui CSS -->
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+
+    <link rel="stylesheet" href="{% static '/css/group.css' %}">
+
+    {% endblock %}
+
+
+</head>
+
+
+
+<body>
+
+    <div class="v242_0">
+        <span class="v242_01">{{ class.name }}</span>
+        <span class="v242_02">{{ class.user_count }}명
+        </span>
+        <span class="v242_03">필터</span>
+    </div>
+
+    <div class="v242_1">
+        <span class="v242_11">검색</span>
+    </div>
+
+    
+    
+    {% block content %}
+    
+    
+    <div class="v264_2">
+        {% for user in class.user_name %}
+        
+        <div class="v249_1">
+            <div class="v246_0" style="background-image: url(/media/{{ user.profile_image }});"
+            ></div>
+            <a href="#" class="" role="">
+            <div class="v246_6">
+                <p>이름 : {{ user.username }}</p>
+                <p>성별 : {{ user.gender }}</p>
+                <p>특이사항 : </p>
+                <p>출생년월 : </p>
+            
+            </div>
+            </a>
+        </div>
+       
+        
+        {% endfor %}
+
+    
+    </div>
+    
+    {% endblock %}
+
+    <footer>
+        {% include "part/_footer.html" %}
+    </footer>
+
+</body>
+
+</html>
+

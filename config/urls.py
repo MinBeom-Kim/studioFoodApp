@@ -20,12 +20,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     # admin
-    path('admin', admin.site.urls),
+    path('admin/', admin.site.urls),
 
     # user
     path('common/', include("common.urls")),
     path('', include("foods.urls")),
-    path('group/', include("groups.urls")),
+    path('group/', include("apps.urls")),
 
 ]
 

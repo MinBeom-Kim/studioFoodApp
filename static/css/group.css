@@ -88,6 +88,7 @@
   height: 14.56rem;
   opacity: 1;
   position: absolute;
+  float: left; 
 }
 
 .v262_211 {
@@ -125,4 +126,51 @@
   height: 14.56rem;
   opacity: 1;
   position: absolute;
+}
+
+.v249_1 {
+  width: 38.13rem;
+  height: 13.13rem;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  margin-bottom: 1.875rem;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  box-shadow: 0px 0.25rem 1.875rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.v246_0 {
+  width: 10.63rem;
+  height: 10.63rem;
+  background: url("../images/v246_0.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 1.25rem;
+  left: 1.25rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.v246_6 {
+  width: 7.375rem;
+  color: rgba(0,0,0,1);
+  position: relative;
+  top : -8.6rem;
+  left: 13.75rem;
+  font-family: Roboto;
+  font-weight: Medium;
+  font-size: 0.65rem;
+  opacity: 1;
+  text-align: left;
+}
+.v246_6 p {
+  top: 1.875rem;
 }

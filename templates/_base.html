@@ -41,7 +41,7 @@
 
 
     {% if request.user.is_authenticated %}
-
+    <a class="nav-link" href="{% url 'common:logout' %}">(로그아웃)</a>
     {% if request.user.role == "teacher" %}
         <nav>
             {% include "part/_teacher_nav.html" %}

@@ -10,13 +10,22 @@ class CustomUserAdmin(UserAdmin):
 
     fieldsets = UserAdmin.fieldsets + (
         (
-            "Custom Profile",
+            "사용자 정보",
             {
                 "fields": ("gender",
                  "role",
                  'profile_image',
                  "bio", "birthdate",
+                 "current_status",
                  "attend"),
+            },
+        ),
+        (
+            "Wide Group",
+            {
+                "fields": (            "current_group",
+                 "main_class",
+                 "part_class")
             },
         ),
     )
@@ -31,4 +40,8 @@ class CustomUserAdmin(UserAdmin):
         "is_active",
         "is_staff",
         "is_superuser",
+    )
+
+    filter_horizontal = UserAdmin.filter_horizontal + (
+        "part_class",
     )

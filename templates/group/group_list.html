@@ -1,37 +1,71 @@
 {% include "group/_group_base.html" %}
 {% block content %}
 
-<div class="v242_0">
-    <span class="v242_01">햇살 유치원</span>
-    <span class="v242_02">9개 반
-    </span>
-    <span class="v242_03">필터</span>
-</div>
-
-<div class="v242_1">
-    <span class="v242_11">검색</span>
-</div>
 
 <div class="v264_2">
-    <div class = "v264_21">
-        <div class="v262_211">
-        </div>
-        <div class="v242_212">돼지반</div>
+        
+    <div class="ui grid container">
+        {% for class in user.class_name %}
+        
+            <a href="{% url 'apps:class_detail' class.id %}" class="btn" role="">
+            <img style = "height: 10rem;" src="/media/{{ class.profile_image }}" alt="{{ class.name }} 이미지">
+            <div class="v242_212">{{ class.name }}
+            </div>
+            </a>
+        {% endfor %}
+
     </div>
 
-    <div class="v264_22">
-        <div class="v262_211">
-        </div>
-        <div class="v242_212">돼지반</div>
-    </div>
 
-    <div class="v264_23">
+
+    
+    
+    <!-- <div class="v264_21">
+        <div class="v262_211"></div>
+        <div class="v242_212"></div>
+    </div> -->
+
+    <!-- <div class="v264_22">
         <div class="v262_211">
         </div>
         <div class="v242_212">돼지반</div>
     </div>
     
+    <div class="v264_23">
+        <div class="v262_211">
+        </div>
+        <div class="v242_212">돼지반</div>
+    </div> -->
+
+
+
+
+    <!-- 페이지변경 -->
+
+    <!-- <ul class="pagination">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul> -->
+    
+    
 
 </div>
+
+<!-- <footer>
+    {% include "part/_footer.html" %}
+</footer> -->
 
 {% endblock %}

@@ -44,8 +44,6 @@ PROJECT_APPS = [
     'apps.apps.AppsConfig',
     'users.apps.UsersConfig',
     'foods.apps.FoodsConfig',
-    'groups.apps.GroupsConfig',
-    'rolepermissions',
     
 ]
 
@@ -151,3 +149,8 @@ LOGIN_REDIRECT_URL  =  '/'
 LOGOUT_REDIRECT_URL = '/'
 
 AUTH_USER_MODEL = "users.User"
+
+
+MEDIA_ROOT = BASE_DIR.joinpath("uploads")
+
+MEDIA_URL = "/media/"
