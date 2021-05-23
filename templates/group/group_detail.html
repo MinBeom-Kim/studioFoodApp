@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
+    <script src="/static/js/jquery.js"></script>
 
     <title>{% block title %}studioFood_Class_Detail{% endblock title %}</title>
 
@@ -31,8 +32,239 @@
 
     <link rel="stylesheet" href="{% static '/css/group.css' %}">
 
+
+
     {% endblock %}
 
+
+    <style>
+	/* The Modal (background) */
+	.modal {
+		display: none;
+		/* Hidden by default */
+		position: fixed;
+		/* Stay in place */
+		z-index: 1;
+		/* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%;
+		/* Full width */
+		height: 100%;
+		/* Full height */
+		overflow: auto;
+		/* Enable scroll if needed */
+		background-color: rgb(0, 0, 0);
+		/* Fallback color */
+		background-color: rgba(0, 0, 0, 0.4);
+		/* Black w/ opacity */
+	}
+
+	/* Modal Content/Box */
+	.modal-content {
+		background-color: #fefefe;
+		margin: 15% auto;
+		/* 15% from the top and centered */
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%;
+		/* Could be more or less, depending on screen size */
+	}
+
+	/* The Close Button */
+	.close {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+    .v255_652 {
+        width: 45.63rem;
+        height: 45.44rem;
+        background: rgba(255,255,255,1);
+        opacity: 1;
+        position: absolute;
+        top: 22.56rem;
+        border-top-left-radius: 3.125rem;
+        border-top-right-radius: 3.125rem;
+        border-bottom-left-radius: 3.125rem;
+        border-bottom-right-radius: 3.125rem;
+    }
+
+    .v255_694 {
+        width: 2.063rem;
+        height: 2.063rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 1.875rem;
+        left: 41.69rem;
+    }
+    .v255_653 {
+        width: 15.63rem;
+        height: 15.63rem;
+        background: url("../images/v255_653.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 9.813rem;
+        left: 2.5rem;
+        border-top-left-radius:  1.25rem;
+        border-top-right-radius:  1.25rem;
+        border-bottom-left-radius:  1.25rem;
+        border-bottom-right-radius:  1.25rem;
+        box-shadow: 0px 0.25rem 1.875rem rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        }
+    .v255_654 {
+        width: 14rem;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        top: 3.75rem;
+        left: 16.63rem;
+        font-family: Roboto;
+        font-weight: Bold;
+        opacity: 1;
+        font-size: 2.15rem;
+        text-align: center;
+    }
+    .v255_658 {
+        width: 23.13rem;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        top: 10.19rem;
+        left: 20rem;
+        font-family: Roboto;
+        font-weight: Medium;
+        font-size: 1.75rem;
+        opacity: 1;
+        text-align: left;
+    }
+    .v255_697 {
+        width: 19.38rem;
+        height: 5.625rem;
+        background: rgba(151,200,222,1);
+        opacity: 1;
+        position: absolute;
+        top: 28.56rem;
+        left: 2.5rem;
+        border-top-left-radius: 2.813rem;
+        border-top-right-radius: 2.813rem;
+        border-bottom-left-radius: 2.813rem;
+        border-bottom-right-radius: 2.813rem;
+        box-shadow: 0px 0.25rem 31.875rem rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
+    .v255_698 {
+        width: 13.56rem;
+        color: rgba(255,255,255,1);
+        position: absolute;
+        top: 2.25rem;
+        left: 2.938rem;
+        font-family: Roboto;
+        font-weight: Bold;
+        font-size: 2.05rem;
+        opacity: 1;
+        text-align: center;
+    }
+    .v255_701 {
+        width: 19.38rem;
+        height: 5.625rem;
+        background: rgba(151,200,222,1);
+        opacity: 1;
+        position: absolute;
+        top: 36.06rem;
+        left: 2.5rem;
+        border-top-left-radius: 2.813rem;
+        border-top-right-radius: 2.813rem;
+        border-bottom-left-radius: 2.813rem;
+        border-bottom-right-radius: 2.813rem;
+        box-shadow: 0px 0.25rem 1.875rem rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
+    .v255_702 {
+        width: 11.5rem;
+        color: rgba(255,255,255,1);
+        position: absolute;
+        top: 2.25rem;
+        left: 3.938rem;
+        font-family: Roboto;
+        font-weight: Bold;
+        font-size: 2.05rem;
+        opacity: 1;
+        text-align: center;
+        }
+    .v255_703 {
+        width: 19.38rem;
+        height: 5.625rem;
+        background: rgba(151,200,222,1);
+        opacity: 1;
+        position: absolute;
+        top: 36.06rem;
+        left:  23.75rem;
+        border-top-left-radius: 2.813rem;
+        border-top-right-radius: 2.813rem;
+        border-bottom-left-radius: 2.813rem;
+        border-bottom-right-radius: 2.813rem;
+        box-shadow: 0px 0.25rem 1.875rem rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
+
+
+    .v255_704 {
+        width: 11.5rem;
+        color: rgba(255,255,255,1);
+        position: absolute;
+        top: 2.25rem;
+        left: 3.938rem;
+        font-family: Roboto;
+        font-weight: Bold;
+        font-size: 2.05rem;
+        opacity: 1;
+        text-align: center;
+    }
+    .v265_2 {
+        width: 19.38rem;
+        height: 5.625rem;
+        background: rgba(151,200,222,1);
+        opacity: 1;
+        position: absolute;
+        top: 28.56rem;
+        left: 23.75rem;
+        border-top-left-radius: 2.813rem;
+        border-top-right-radius: 2.813rem;
+        border-bottom-left-radius: 2.813rem;
+        border-bottom-right-radius: 2.813rem;
+    }
+    .v265_3 {
+        width:  13.56rem;
+        color: rgba(255,255,255,1);
+        position: absolute;
+        top: 2.25rem;
+        left: 2.938rem;
+        font-family: Roboto;
+        font-weight: Bold;
+        font-size: 2.05rem;
+        opacity: 1;
+        text-align: center;
+    }
+    li {
+        padding-bottom: 1rem;
+        font-size: 1.7rem;
+    }
+    </style>
 
 </head>
 
@@ -54,27 +286,68 @@
     
     
     {% block content %}
-    
-    
+  
     <div class="v264_2">
+ 
         {% for user in class.user_name %}
         
         <div class="v249_1">
             <div class="v246_0" style="background-image: url(/media/{{ user.profile_image }});"
             ></div>
-            <a href="#" class="" role="">
-            <div class="v246_6">
+            
+            <div id = {{ user.pk}} class="v246_6 ">
                 <p>이름 : {{ user.username }}</p>
                 <p>성별 : {{ user.gender }}</p>
                 <p>특이사항 : </p>
                 <p>출생년월 : </p>
+                
             
             </div>
-            </a>
+            <!-- The Modal -->
+            <div class="modal {{ user.pk}}{{ user.pk}}">
+            
+                <!-- Modal content -->
+                <div class="v255_652 ">
+                    <span class="v255_694 close {{ user.pk }}">&times;</span>
+                    <div class="project_1" style="width:100%;height:45em;">
+            
+                        <div class="v255_653"style="background-image: url(/media/{{ user.profile_image }});"></div>
+                        <span class="v255_654">{{ user.username }} 어린이</span>
+                        <div class="v255_658">
+                            <ul>
+                                <li>성별 : {{ user.gender }}</li>
+                                <li>생일 : 2014년 3월 13일 (만6세)</li>
+                                <li>키 : 100 cm</li>
+                                <li>몸무게 : 20 kg</li>
+                                <li>싫어하는 음식 : 피망, 당근</li>
+                                <li>알러지 : 오이, 갑각류</li>
+                            </ul>
+                            
+                        </div>    
+                        <div class="v255_697">
+                            <span class="v255_698">정보 변경 요청</span>
+                        </div>
+                        <div class="v255_701">
+                            <span class="v255_702">식사 전 입력</span>
+                        </div>
+                        <div class="v255_703">
+                            <span class="v255_704">식사 후 입력</span>
+                        </div>
+                        <div class="v265_2">
+                            <span class="v265_3">예전 식사 확인</span>
+                        </div>
+                    </div>
+            
+                </div>
+            
+            </div>
+            
+
         </div>
        
         
         {% endfor %}
+
 
     
     </div>
@@ -84,6 +357,52 @@
     <footer>
         {% include "part/_footer.html" %}
     </footer>
+
+   <script>
+			// Get the modal
+
+			var index = 1;
+			var id_check = 0;
+
+			for (index = 1; index < 99999; index++) {
+				$('#' + index).click(function () {
+
+					id_check = $(this).attr('id');
+					var modal = document.getElementsByClassName(id_check + id_check)[0];
+					console.log(modal)
+					// Get the button that opens the modal
+					modal.style.display = "block";
+
+					// Get the <span> element that closes the modal
+					var span = document.getElementsByClassName( id_check)[0];
+					// When the user clicks on <span> (x), close the modal
+					span.onclick = function () {
+						modal.style.display = "none";
+					}
+
+					$(document).keydown(function (event) {
+						if (event.keyCode == 27 || event.which == 27) {
+
+							modal.style.display = "none";
+
+						}
+					});
+
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function (event) {
+						if (event.target == modal) {
+							modal.style.display = "none";
+						}
+					}
+
+
+				});
+
+
+			}
+
+
+		</script>
 
 </body>
 
