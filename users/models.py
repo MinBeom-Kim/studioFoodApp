@@ -55,6 +55,8 @@ class User(AbstractUser):
     role = models.CharField(choices=ROLE_CHOICES, max_length=10)
     profile_image = models.ImageField(upload_to="user/image", null=True, default="", blank=True)
     bio = models.TextField(default="", blank=True)
+    height = models.FloatField(default=0)
+    weight = models.FloatField(default=0)
     birthdate = models.DateField(null=True, blank=True)
     attend = models.IntegerField(default=0)
     current_status        = models.CharField(max_length=10, choices=STATUS, default='active')

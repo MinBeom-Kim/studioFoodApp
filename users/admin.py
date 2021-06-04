@@ -2,7 +2,6 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from . import models
 
-
 @admin.register(models.User)
 class CustomUserAdmin(UserAdmin):
 
@@ -18,6 +17,14 @@ class CustomUserAdmin(UserAdmin):
                  "bio", "birthdate",
                  "current_status",
                  "attend"),
+            },
+        ),
+        (
+            "Health",
+            {
+                "fields": (            "height",
+                 "weight",
+                )
             },
         ),
         (

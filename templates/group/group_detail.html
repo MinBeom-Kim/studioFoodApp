@@ -38,6 +38,7 @@
 
 
     <style>
+
 	/* The Modal (background) */
 	.modal {
 		display: none;
@@ -88,7 +89,7 @@
 
     .v255_652 {
         width: 45.63rem;
-        height: 45.44rem;
+        height: 49.44rem;
         background: rgba(255,255,255,1);
         opacity: 1;
         position: absolute;
@@ -158,7 +159,7 @@
         background: rgba(151,200,222,1);
         opacity: 1;
         position: absolute;
-        top: 28.56rem;
+        top: 33.56rem;
         left: 2.5rem;
         border-top-left-radius: 2.813rem;
         border-top-right-radius: 2.813rem;
@@ -171,7 +172,7 @@
         width: 13.56rem;
         color: rgba(255,255,255,1);
         position: absolute;
-        top: 2.25rem;
+        top: 1.5rem;
         left: 2.938rem;
         font-family: Roboto;
         font-weight: Bold;
@@ -185,7 +186,7 @@
         background: rgba(151,200,222,1);
         opacity: 1;
         position: absolute;
-        top: 36.06rem;
+        top: 41.06rem;
         left: 2.5rem;
         border-top-left-radius: 2.813rem;
         border-top-right-radius: 2.813rem;
@@ -198,7 +199,7 @@
         width: 11.5rem;
         color: rgba(255,255,255,1);
         position: absolute;
-        top: 2.25rem;
+        top: 1.5rem;
         left: 3.938rem;
         font-family: Roboto;
         font-weight: Bold;
@@ -212,7 +213,7 @@
         background: rgba(151,200,222,1);
         opacity: 1;
         position: absolute;
-        top: 36.06rem;
+        top: 41.06rem;
         left:  23.75rem;
         border-top-left-radius: 2.813rem;
         border-top-right-radius: 2.813rem;
@@ -227,7 +228,7 @@
         width: 11.5rem;
         color: rgba(255,255,255,1);
         position: absolute;
-        top: 2.25rem;
+        top: 1.5rem;
         left: 3.938rem;
         font-family: Roboto;
         font-weight: Bold;
@@ -241,7 +242,7 @@
         background: rgba(151,200,222,1);
         opacity: 1;
         position: absolute;
-        top: 28.56rem;
+        top: 33.56rem;
         left: 23.75rem;
         border-top-left-radius: 2.813rem;
         border-top-right-radius: 2.813rem;
@@ -252,7 +253,7 @@
         width:  13.56rem;
         color: rgba(255,255,255,1);
         position: absolute;
-        top: 2.25rem;
+        top: 1.5rem;
         left: 2.938rem;
         font-family: Roboto;
         font-weight: Bold;
@@ -261,9 +262,23 @@
         text-align: center;
     }
     li {
-        padding-bottom: 1rem;
-        font-size: 1.7rem;
+        /* padding-bottom: 4px; */
+        font-size: 1.3rem;
     }
+    .v246_61 > p {
+        left : 13.75rem;
+        position: relative;
+        top:-10rem;
+        height: 2rem;
+    }
+    .v246_61 > span {
+        left : 13.75rem;
+        position: relative;
+        top:-10rem;
+        height: 2rem;
+    }
+
+
     </style>
 
 </head>
@@ -295,11 +310,11 @@
             <div class="v246_0" style="background-image: url(/media/{{ user.profile_image }});"
             ></div>
             
-            <div id = {{ user.pk}} class="v246_6 ">
+            <div id = {{ user.pk}} class="v246_6 v246_61">
                 <p>이름 : {{ user.username }}</p>
                 <p>성별 : {{ user.gender }}</p>
                 <p>특이사항 : </p>
-                <p>출생년월 : </p>
+                <span>출생년월 : {{ user.birthdate}}</span>
                 
             
             </div>
@@ -316,9 +331,9 @@
                         <div class="v255_658">
                             <ul>
                                 <li>성별 : {{ user.gender }}</li>
-                                <li>생일 : 2014년 3월 13일 (만6세)</li>
-                                <li>키 : 100 cm</li>
-                                <li>몸무게 : 20 kg</li>
+                                <li>생일 : {{ user.birthdate}} (만x세)</li>
+                                <li>키 : {{ user.height }} cm</li>
+                                <li>몸무게 : {{ user.weight }} kg</li>
                                 <li>싫어하는 음식 : 피망, 당근</li>
                                 <li>알러지 : 오이, 갑각류</li>
                             </ul>
@@ -336,6 +351,11 @@
                         <div class="v265_2">
                             <span class="v265_3">예전 식사 확인</span>
                         </div>
+                    </div>
+
+                    <div class="project_2" style="width:100%;height:45em;">
+                        
+
                     </div>
             
                 </div>
@@ -369,6 +389,7 @@
 
 					id_check = $(this).attr('id');
 					var modal = document.getElementsByClassName(id_check + id_check)[0];
+                    
 					console.log(modal)
 					// Get the button that opens the modal
 					modal.style.display = "block";
@@ -394,6 +415,20 @@
 							modal.style.display = "none";
 						}
 					}
+
+                    // Get the <span> element that closes the modal
+                    var i= 0;
+                    for (index = 0; index < 99999; index++){
+                        var before = document.getElementsByClassName('v255_701')[index];
+                        before.onclick = function () {
+                            modal.style.display = "none";
+                        }
+
+                    }
+
+
+
+                    
 
 
 				});
